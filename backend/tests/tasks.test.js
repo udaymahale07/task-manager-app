@@ -19,8 +19,7 @@ describe('Task Management API Tests (Practical 12 CI/CD Pipeline)', () => {
 
   test('GET /tasks returns 200', async () => {
     const res = await request(app).get('/tasks');
-    // DELIBERATE FAILURE FOR PRACTICAL 12 DEMONSTRATION: Expecting 500 instead of 200
-    expect(res.statusCode).toBe(500);
+    expect(res.statusCode).toBe(200);
   });
 
   test('GET /api/tasks returns 200 and array of tasks', async () => {
