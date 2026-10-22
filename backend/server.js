@@ -46,6 +46,10 @@ mongoose
 // 1. Authentication Routes (Public - No Token Needed)
 app.use("/api/auth", authRoutes);
 
+// AI Integration Routes (Practical 13)
+const aiRoutes = require("./routes/aiRoutes");
+app.use("/api/ai", aiRoutes);
+
 // 2. Task Router (Protected by auth middleware)
 const router = express.Router();
 

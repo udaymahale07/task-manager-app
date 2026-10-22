@@ -11,3 +11,6 @@ export const fetchTasks = () => client.get("/");
 export const createTask = (task) => client.post("/", task);
 export const updateTask = (id, task) => client.put(`/${id}`, task);
 export const deleteTask = (id) => client.delete(`/${id}`);
+export const generateAiDescription = (title, options = {}) =>
+  axios.post("http://localhost:5000/api/ai/generate-description", { title, ...options });
+

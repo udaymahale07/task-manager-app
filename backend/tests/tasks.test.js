@@ -40,4 +40,16 @@ describe('Task Management API Tests (Practical 12 CI/CD Pipeline)', () => {
     expect(res.statusCode).toBe(201);
     expect(res.body.success).toBe(true);
   });
+
+  test('POST /api/ai/generate-description returns AI suggestion and disclaimer (Practical 13)', async () => {
+    const res = await request(app)
+      .post('/api/ai/generate-description')
+      .send({
+        title: 'Build REST API with Express',
+        useFallback: true
+      });
+    expect(res.statusCode).toBe(200);
+    expect(res.body.description).toBeDefined();
+    expect(res.body.disclaimer).toBeDefined();
+  });
 });

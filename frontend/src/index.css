@@ -306,6 +306,104 @@ button {
   font-size: 12px;
 }
 
+/* ---------- AI Assistant Elements (Practical 13) ---------- */
+.new-task__ai-btn {
+  background: linear-gradient(135deg, #8a2be2 0%, #6366f1 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.new-task__ai-btn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
+}
+
+.new-task__ai-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.new-task__expanded {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.new-task__ai-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.new-task__ai-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.new-task__ai-test-fail-btn {
+  background: transparent;
+  border: 1px dashed rgba(248, 81, 73, 0.4);
+  color: #ff9992;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.new-task__ai-test-fail-btn:hover:not(:disabled) {
+  background: rgba(248, 81, 73, 0.12);
+}
+
+.new-task__ai-feedback {
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+}
+
+.new-task__ai-feedback--success {
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  color: #c7d2fe;
+}
+
+.new-task__ai-feedback--fallback {
+  background: rgba(210, 153, 34, 0.12);
+  border: 1px solid rgba(210, 153, 34, 0.35);
+  color: #f7c768;
+}
+
+.new-task__ai-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11px;
+  color: #d1d5db;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px 10px;
+  line-height: 1.4;
+}
+
+.new-task__ai-disclaimer-icon {
+  font-size: 13px;
+}
+
 /* ---------- Board / Columns ---------- */
 .board {
   display: grid;
